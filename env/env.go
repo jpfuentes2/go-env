@@ -21,7 +21,6 @@ package env
 */
 
 import (
-	"fmt"
 	"io/ioutil"
 	"os"
 	"strings"
