@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
-	os.Clearenv() // remove all vars
-	fmt.Println(os.Environ())
+	for _, v := range os.Environ() {
+		fmt.Println(v)
+	}
 }
