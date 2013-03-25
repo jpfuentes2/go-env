@@ -1,8 +1,8 @@
-package env
+package autoload
 
 /*
   To use autoload, import the package like so:
-      import _ "env/autoload"
+      import _ "github.com/jpfuentes2/env.go/autoload"
 
   Importing this package will automatically source the `pwd`/.env file and set
   each environment variable.
@@ -13,7 +13,7 @@ package env
 */
 
 import (
-	"env"
+	"github.com/jpfuentes2/env.go"
 	"os"
 	"path"
 )

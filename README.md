@@ -2,16 +2,16 @@ Loads environment variables from .env into ENV, automagically.
 
 ## Installation
 
-`go get github.com/jpfuentes2/env.go/env`
+`go get github.com/jpfuentes2/env.go`
 
 ## Usage
 
 ### Autoload
 
-Autoloading your `$PWD/.env` is as simple as importing the `env/autoload` package:
+Autoloading your `$PWD/.env` is as simple as importing the `env.go/autoload` package:
 
 ```go
-import _ "github.com/jpfuentes2/env.go/env/autoload"
+import _ "github.com/jpfuentes2/env.go/autoload"
 ```
 
 ### I want it my way

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	_ "github.com/jpfuentes2/env.go/env/autoload"
+	_ "github.com/jpfuentes2/env.go/env"
 	"os"
 )
 
