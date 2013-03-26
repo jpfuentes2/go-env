@@ -13,7 +13,7 @@ package autoload
 */
 
 import (
-	"github.com/jpfuentes2/env.go"
+	"github.com/jpfuentes2/go-env"
 	"os"
 	"path"
 )

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jpfuentes2/env.go/env"
+	"github.com/jpfuentes2/go-env"
 	"os"
 	"path"
 )

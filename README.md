@@ -2,16 +2,16 @@ Loads environment variables from .env into ENV, automagically.
 
 ## Installation
 
-`go get github.com/jpfuentes2/env.go`
+`go get github.com/jpfuentes2/go-env`
 
 ## Usage
 
 ### Autoload
 
-Autoloading your `$PWD/.env` is as simple as importing the `env.go/autoload` package:
+Autoloading your `$PWD/.env` is as simple as importing the `go-env/autoload` package:
 
 ```go
-import _ "github.com/jpfuentes2/env.go/autoload"
+import _ "github.com/jpfuentes2/go-env/autoload"
 ```
 
 ### I want it my way
@@ -21,14 +21,14 @@ That's fine. Chillllll, Winston:
 ```go
 package main
 
-import "github.com/jpfuentes2/env.go/env"
+import "github.com/jpfuentes2/go-env"
 
 func main() {
   env.ReadEnv("/path/to/my/file")
 }
 ```
 
-See the [examples](https://github.com/jpfuentes2/env.go/examples) folder.
+See the [examples](https://github.com/jpfuentes2/go-env/examples) folder.
 
 ## Authors
 
