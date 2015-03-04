@@ -30,6 +30,21 @@ func main() {
 
 See the [examples](https://github.com/jpfuentes2/go-env/examples) folder.
 
+### Multiple Rails Environments
+
+Export `GOENV` from your shell to specify a different env file to be loaded.
+
+For example:
+
+```
+export GOENV=test
+
+```
+
+Would result in `.env.test` being loaded instead of `.env`.
+
+Please note that development is considered to map to `.env`. So exporting `GOENV=development` will mean that `.env` is loaded.
+
 ## Authors
 
 Created and maintained by

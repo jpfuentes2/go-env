@@ -20,7 +20,17 @@ import (
 
 // Auto-loads `pwd`/.env
 func init() {
+	var file string
 	pwd, _ := os.Getwd()
-	file := path.Join(pwd, ".env")
+	
+	goenv := os.Getenv("GOENV")
+	
+	if len(goenv) == 0 || goenv == "development" {
+		file = path.Join(pwd, ".env")
+	} else {
+		//e.g. ".env.test"
+		file = path.Join(pwd, ".env." + goenv)
+	}
+
 	env.ReadEnv(file)
 }
