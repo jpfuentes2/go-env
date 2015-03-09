@@ -1,5 +1,3 @@
-package autoload
-
 /*
   To use autoload, import the package like so:
       import _ "github.com/jpfuentes2/go-env/autoload"
@@ -11,6 +9,7 @@ package autoload
   then you should import the base "env" package and call it with a specific path. See env.go
   for more information.
 */
+package autoload
 
 import (
 	"github.com/jpfuentes2/go-env"
@@ -18,7 +17,7 @@ import (
 	"path"
 )
 
-// Auto-loads `pwd`/.env
+// Auto-loads `pwd`/.env or GOENV
 func init() {
 	var file string
 	pwd, _ := os.Getwd()

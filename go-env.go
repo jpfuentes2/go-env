@@ -1,5 +1,3 @@
-package env
-
 /*
 	The env.go package sources an environment file and sets the variables => values
 	for the executing Go process using `os.Setenv()`
@@ -19,6 +17,7 @@ package env
 		import "env"
 		env.ReadEnv("/my/path/.env")
 */
+package env
 
 import (
 	"io/ioutil"
@@ -26,6 +25,8 @@ import (
 	"strings"
 )
 
+// ReadEnv reads an .env formatted file and sets the vars to the current
+// environment so exec calls respect the settings.
 func ReadEnv(file string) error {
 	content, err := ioutil.ReadFile(file)
 	if err != nil {
