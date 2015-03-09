@@ -7,13 +7,12 @@ import (
 	"path"
 )
 
-// Note this is exactly what autoload.go is doing
+// Note this is exactly what autoload.go does
 func main() {
-	os.Clearenv() // remove all vars
-
 	pwd, _ := os.Getwd()
 	file := path.Join(pwd, ".env")
 	env.ReadEnv(file)
-
-	fmt.Println(os.Environ())
+	for _, v := range os.Environ() {
+		fmt.Println(v)
+	}
 }
