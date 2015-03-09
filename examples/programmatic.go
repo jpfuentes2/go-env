@@ -10,8 +10,7 @@ import (
 // Note this is exactly what autoload.go does
 func main() {
 	pwd, _ := os.Getwd()
-	file := path.Join(pwd, ".env")
-	env.ReadEnv(file)
+	env.ReadEnv(path.Join(pwd, ".env"))
 	for _, v := range os.Environ() {
 		fmt.Println(v)
 	}

@@ -12,6 +12,7 @@
 package autoload
 
 import (
+	"fmt"
 	"github.com/jpfuentes2/go-env"
 	"os"
 	"path"
@@ -19,17 +20,13 @@ import (
 
 // Auto-loads `pwd`/.env or GOENV
 func init() {
-	var file string
 	pwd, _ := os.Getwd()
-	
 	goenv := os.Getenv("GOENV")
-	
-	if len(goenv) == 0 || goenv == "development" {
-		file = path.Join(pwd, ".env")
-	} else {
-		//e.g. ".env.test"
-		file = path.Join(pwd, ".env." + goenv)
+	file := ".env"
+
+	if len(goenv) > 0 && goenv != "development" {
+		file = fmt.Sprintf("%s.%s", file, goenv)
 	}
 
-	env.ReadEnv(file)
+	env.ReadEnv(path.Join(pwd, file))
 }
