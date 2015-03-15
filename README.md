@@ -28,9 +28,9 @@ func main() {
 }
 ```
 
-See the [examples](https://github.com/jpfuentes2/go-env/examples) folder.
+See the [examples](https://github.com/jpfuentes2/go-env/tree/master/examples) folder.
 
-### Multiple Rails Environments
+### Multiple Application Environments
 
 Export `GOENV` from your shell to specify a different env file to be loaded.
 
