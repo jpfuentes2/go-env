@@ -22,11 +22,13 @@ import (
 func init() {
 	pwd, _ := os.Getwd()
 	goenv := os.Getenv("GOENV")
-	file := ".env"
+	envFile := ".env"
 
 	if len(goenv) > 0 && goenv != "development" {
-		file = fmt.Sprintf("%s.%s", file, goenv)
+		envFile = fmt.Sprintf("%s.%s", envFile, goenv)
 	}
 
-	env.ReadEnv(path.Join(pwd, file))
+	localFile := envFile + ".local"
+	env.ReadEnv(path.Join(pwd, envFile))
+	env.ReadEnv(path.Join(pwd, localFile))
 }
