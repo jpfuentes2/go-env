@@ -28,7 +28,7 @@ func main() {
 }
 ```
 
-See the [examples](https://github.com/jpfuentes2/go-env/tree/master/examples) folder.
+See the [examples](examples/) folder.
 
 ### Multiple Application Environments
 
@@ -38,7 +38,6 @@ For example:
 
 ```
 export GOENV=test
-
 ```
 
 Would result in `.env.test` being loaded instead of `.env`.
