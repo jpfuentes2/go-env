@@ -44,6 +44,10 @@ Would result in `.env.test` being loaded instead of `.env`.
 
 Please note that development is considered to map to `.env`. So exporting `GOENV=development` will mean that `.env` is loaded.
 
+#### Local files
+
+Whenever `.env` is autoloaded, `go-env` will also try to load `.env.local` for local overrides.
+
 ## Authors
 
 Created and maintained by
