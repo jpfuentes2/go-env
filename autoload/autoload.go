@@ -23,7 +23,7 @@ func init() {
 	Load()
 }
 
-// Load loads `pwd`/.env or GOENV
+// Load loads `pwd`/.env or GOENV and a `.local` for overrides
 func Load() {
 	pwd, _ := os.Getwd()
 	goenv := os.Getenv("GOENV")
